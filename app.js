@@ -3,7 +3,8 @@
 var express = require('express');
 var app = express();
 
-var bodyPars
+var bodyParser = require('body-parser'); // Loads the piece of middleware for managing the settings
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -15,7 +16,7 @@ app.get('/', function(req, res) {
 });
 
 // about page 
-app.get('/about', function(req, res) {
+app.get('/login', function(req, res) {
     res.render('pages/about');
 });
 
