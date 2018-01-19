@@ -16,14 +16,22 @@ console.log(infoarray);
 // use res.render to load up an ejs view file
 // index page 
 app.get('/', function(req, res) {
-    res.render('login.ejs');
+    res.render('index.ejs');
 });
 
 app.post('/login',urlencodedParser,function(req,res){
-	var usrname = req.body.username;
+	var username = req.body.username;
 	var password = req.body.password;
-	// console.log(usrname);
-	if()
+	
+	console.log(username + "   " + password)
+	infoarray.forEach(function(element, index) {
+		// statements
+		console.log(index)
+		// if(infoarray[username] == password){
+		// 	console.log('you logged in');
+		// }
+	});
+
 	res.redirect('/');
 });
 
