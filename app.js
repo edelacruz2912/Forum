@@ -10,18 +10,20 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
 
-var userinfo = fs.readFileSync('');
+var userinfo = fs.readFileSync('userInfo.json');
 var infoarray = JSON.parse(userinfo);
-
+console.log(infoarray);
 // use res.render to load up an ejs view file
 // index page 
 app.get('/', function(req, res) {
-    res.render('index.ejs');
+    res.render('login.ejs');
 });
 
 app.post('/login',urlencodedParser,function(req,res){
-	var usrname = req.body.usrname;
-	console.log(usrname);
+	var usrname = req.body.username;
+	var password = req.body.password;
+	// console.log(usrname);
+	if()
 	res.redirect('/');
 });
 
