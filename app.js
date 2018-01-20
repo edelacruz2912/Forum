@@ -31,18 +31,19 @@ app.post('/login',urlencodedParser,function(req,res){
     	if(username === infoarray[i].username)
     	{
     		console.log("log in success");
+            res.redirect('/profile');
             break;
-
-
-    	}
-        
+    	}       
     
 	}
-
-
-
-
-     res.redirect('/');
+    // res.redirect('/');
 });
+
+app.get('/profile',urlencodedParser,function(req,res){
+
+   res.render('profile.ejs');
+});
+
+
 app.listen(8080);
 console.log('8080 is the magic port');
