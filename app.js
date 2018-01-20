@@ -28,21 +28,23 @@ app.post('/login',urlencodedParser,function(req,res){
    	for (i = 0; i < infoarray.length; i++) 
    	{
     	// console.log(infoarray[i].username);
-    	if(username === infoarray[i].username)
+    	if(username === infoarray[i].username &&  password === infoarray[i].password)
     	{
     		console.log("log in success");
-            res.redirect('/profile');
-            break;
+            // res.redirect('/profile');
+            res.render('profile.ejs',{userName:username});
+
+            break;  //break take me out of the loop
     	}       
     
 	}
     // res.redirect('/');
 });
 
-app.get('/profile',urlencodedParser,function(req,res){
+// app.get('/profile',urlencodedParser,function(req,res){
 
-   res.render('profile.ejs');
-});
+//    res.render('profile.ejs',{userName:req.body.username});
+// });
 
 
 app.listen(8080);
