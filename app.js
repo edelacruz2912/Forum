@@ -26,7 +26,8 @@ app.post('/login',urlencodedParser,function(req,res){
     var username = req.body.username;
     var password = req.body.password;
    	for (i = 0; i < infoarray.length; i++) 
-   	{
+   	{   
+        // testing to see if user info match with data on dataBase which is the jsonFile
     	// console.log(infoarray[i].username);
     	if(username === infoarray[i].username &&  password === infoarray[i].password)
     	{
@@ -35,7 +36,13 @@ app.post('/login',urlencodedParser,function(req,res){
             res.render('profile.ejs',{userName:username});
 
             break;  //break take me out of the loop
-    	}       
+    	}
+        else if(username != infoarray[i].username || password != infoarray[i].password)
+        {
+            console.log("wrong info");
+            break;
+        }
+
     
 	}
     // res.redirect('/');
