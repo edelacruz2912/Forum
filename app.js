@@ -20,6 +20,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/login',urlencodedParser,function(req,res){
+
 	//username and password from req.body.username and password
 	// are the name attribute on the form 
     var username = req.body.username;
