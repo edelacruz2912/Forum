@@ -12,12 +12,18 @@ app.use(express.static('views'));
 var userinfo = fs.readFileSync('userInfo.json');
 var infoarray = JSON.parse(userinfo);
 console.log(infoarray);
+
+// To be able to implement the css file
+app.use(express.static(__dirname + '/public'));
+
+
+
 // use res.render to load up an ejs view file
 // index page 
-
 app.get('/', function(req, res) {
     res.render('index.ejs');
 });
+
 
 app.post('/login',urlencodedParser,function(req,res){
 
