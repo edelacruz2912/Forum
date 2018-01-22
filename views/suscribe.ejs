@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+
+</head>
+<body>
+
+	<h1>Enter a name and see what happen</h1>
+	<form action="/suscribe" method = "post">
+		
+	  	<input type="text" name="user" required >	
+	  	<input type="submit" value="Submit">
+	  	
+	</form> 
+
+
+
+	<% for (var i = 0; i < newuser.length; i++){%>    	
+		
+    	
+	 	
+	 	<p><%= newuser[i].username %> </p>
+	 	<p><img src= <%= images[i] %>> </p>
+	 		
+	 	
+
+
+	<%} %>
+
+
+	
+	
+
+	
+
+
+
+</body>
+</html>

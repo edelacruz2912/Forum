@@ -17,6 +17,9 @@ console.log(infoarray);
 app.use(express.static(__dirname + '/public'));
 
 
+// arrayofImages
+var arrayofImages = ['gameOfthrones.jpg','success.jpg','byAccident.jpg','byAccident.jpg','byAccident.jpg'];
+
 
 // use res.render to load up an ejs view file
 // index page 
@@ -54,10 +57,42 @@ app.post('/login',urlencodedParser,function(req,res){
     // res.redirect('/');
 });
 
-// app.get('/profile',urlencodedParser,function(req,res){
+ app.get('/suscribe',urlencodedParser,function(req,res){
 
-//    res.render('profile.ejs',{userName:req.body.username});
-// });
+    res.render('suscribe.ejs',{newuser:infoarray,images:arrayofImages});
+
+ });
+
+
+app.post('/suscribe',urlencodedParser,function(req,res){
+
+    var user = req.body.user;
+    // var userImg = 
+    var newUser = 
+    {
+        "username":user,
+        "password":" ",
+        "img": "   "
+    }
+
+    infoarray.push(newUser);
+    var appendedInfo = JSON.stringify(infoarray);
+
+
+    fs.writeFile('userInfo.json', appendedInfo, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+    });
+
+    console.log("after added new user " + userinfo);
+
+    //finishing
+    res.redirect('/suscribe');
+
+
+
+
+ });
 
 
 app.listen(8080);
