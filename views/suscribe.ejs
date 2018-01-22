@@ -8,7 +8,7 @@
 
 </head>
 <body>
-
+	<div id = "suscribeContainer">
 	<h1>Enter a name and see what happen</h1>
 	<form action="/suscribe" method = "post">
 		
@@ -19,17 +19,19 @@
 
 
 
-	<% for (var i = 0; i < newuser.length; i++){%>    	
+	<% for (var i = 0; i < newuser.length; i++){%>
 		
     	
 	 	
 	 	<p><%= newuser[i].username %> </p>
-	 	<p><img src= <%= images[i] %>> </p>
-	 		
+	 	<p><img src= <%= images[i] %>> </p> 		
 	 	
 
 
 	<%} %>
+
+
+	</div>
 
 
 	

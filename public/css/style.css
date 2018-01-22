@@ -7,3 +7,89 @@ body
 {
 	height: 100%;
 }
+
+/*profile properties*/
+
+
+
+#profileHead
+{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#welcomeMessage
+{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.profilePara
+{
+	text-align: center;
+	font-size: 2em;
+
+}
+
+#profilePic
+{
+	text-align: center;
+	display: block;
+}
+
+
+.paraContainer
+{
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+	font-size: 2em;
+
+}
+
+/*loginPage*/
+#loginContainer
+{
+	margin-left: 30%;
+}
+
+
+#loginContainer input
+{
+	width: 25em;
+	height: 10%;
+}
+
+#loginContainer p
+{
+	text-transform: uppercase;
+	padding-top: 1em;
+}
+
+/*suscribe Page*/
+
+#suscribeContainer
+{
+	margin-left:25%; 
+}
+
+#suscribeContainer img
+{
+	height: 30em;
+	width: 30em;
+}
+
+#suscribeContainer input
+{
+	width: 20em;
+}
+
+
+#userNameSu
+{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 5em;
+}
+
